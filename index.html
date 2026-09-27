@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — vorq</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --black: #0a0a0a;
+      --white: #ffffff;
+      --grey-100: #f5f5f5;
+      --grey-200: #e8e8e8;
+      --grey-400: #999999;
+      --grey-600: #555555;
+      --grey-800: #222222;
+      --purple: #534AB7;
+      --purple-light: #EEEDFe;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--grey-800);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    /* Header */
+    .header {
+      background: var(--black);
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+    .header-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: var(--white);
+    }
+
+    .last-updated {
+      font-size: 12px;
+      color: var(--grey-400);
+      font-weight: 400;
+    }
+
+    /* Hero */
+    .hero {
+      background: var(--black);
+      padding: 64px 24px 56px;
+      text-align: center;
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      color: var(--grey-400);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -1px;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .hero p {
+      font-size: 15px;
+      color: var(--grey-400);
+      max-width: 460px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Encryption badge */
+    .encryption-banner {
+      background: #0f1a0f;
+      border: 1px solid #1a3a1a;
+      border-radius: 12px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 40px 0 0;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .encryption-icon {
+      width: 36px;
+      height: 36px;
+      background: #1a3a1a;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .encryption-text {
+      text-align: left;
+    }
+
+    .encryption-text strong {
+      display: block;
+      color: #4CAF50;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .encryption-text span {
+      color: #888;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    /* Main content */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    /* Table of contents */
+    .toc {
+      background: var(--grey-100);
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin-bottom: 56px;
+    }
+
+    .toc h2 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--grey-600);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 16px;
+    }
+
+    .toc ol {
+      padding-left: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 32px;
+    }
+
+    .toc li {
+      font-size: 13px;
+    }
+
+    .toc a {
+      color: var(--purple);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 52px;
+      scroll-margin-top: 80px;
+    }
+
+    .section-number {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--purple);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .section h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--black);
+      letter-spacing: -0.4px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--grey-200);
+    }
+
+    .section h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--black);
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      font-size: 15px;
+      color: var(--grey-600);
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .section ul, .section ol {
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    .section li {
+      font-size: 15px;
+      color: var(--grey-600);
+      line-height: 1.7;
+      margin-bottom: 6px;
+    }
+
+    /* Info cards */
+    .info-card {
+      background: var(--grey-100);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .info-card.purple {
+      background: var(--purple-light);
+      border-left: 3px solid var(--purple);
+    }
+
+    .info-card.green {
+      background: #f0faf0;
+      border-left: 3px solid #4CAF50;
+    }
+
+    .info-card.yellow {
+      background: #fffbf0;
+      border-left: 3px solid #FFC107;
+    }
+
+    .info-card p {
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+
+    .info-card strong {
+      color: var(--black);
+    }
+
+    /* Table */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .data-table th {
+      background: var(--black);
+      color: var(--white);
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 500;
+      font-size: 13px;
+    }
+
+    .data-table th:first-child {
+      border-radius: 8px 0 0 0;
+    }
+
+    .data-table th:last-child {
+      border-radius: 0 8px 0 0;
+    }
+
+    .data-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--grey-200);
+      color: var(--grey-600);
+      vertical-align: top;
+    }
+
+    .data-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .data-table tr:nth-child(even) td {
+      background: var(--grey-100);
+    }
+
+    /* Rights grid */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .right-card {
+      background: var(--grey-100);
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+
+    .right-card strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+
+    .right-card span {
+      font-size: 13px;
+      color: var(--grey-600);
+      line-height: 1.5;
+    }
+
+    /* Contact section */
+    .contact-box {
+      background: var(--black);
+      border-radius: 16px;
+      padding: 36px 40px;
+      margin-top: 48px;
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+      letter-spacing: -0.4px;
+    }
+
+    .contact-box p {
+      font-size: 14px;
+      color: var(--grey-400);
+      margin-bottom: 24px;
+    }
+
+    .contact-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .contact-item {
+      background: #161616;
+      border: 1px solid #2a2a2a;
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+
+    .contact-item label {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--grey-400);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 5px;
+    }
+
+    .contact-item span {
+      font-size: 14px;
+      color: var(--white);
+      font-weight: 400;
+    }
+
+    .contact-item a {
+      color: var(--purple);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--grey-100);
+      border-top: 1px solid var(--grey-200);
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 13px;
+      color: var(--grey-400);
+      line-height: 1.6;
+    }
+
+    .footer strong {
+      color: var(--grey-600);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .toc ol {
+        grid-template-columns: 1fr;
+      }
+
+      .rights-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-details {
+        grid-template-columns: 1fr;
+      }
+
+      .header-inner {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">vorq</div>
+      <div class="last-updated">Last updated: September 2026</div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-badge">Legal Document</div>
+    <h1>Privacy Policy</h1>
+    <p>We built vorq with privacy at its core. Here is exactly what we collect, why we collect it, and how we protect it.</p>
+    <div class="encryption-banner">
+      <div class="encryption-icon" style="font-size:13px;font-weight:700;color:#4CAF50;">E2E</div>
+      <div class="encryption-text">
+        <strong>End-to-End Encrypted by Default</strong>
+        <span>All private messages are encrypted on your device. Even vorq cannot read them.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <!-- Table of Contents -->
+    <div class="toc">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#s1">Introduction</a></li>
+        <li><a href="#s2">Information We Collect</a></li>
+        <li><a href="#s3">How We Use Your Information</a></li>
+        <li><a href="#s4">End-to-End Encryption</a></li>
+        <li><a href="#s5">Data Storage and Security</a></li>
+        <li><a href="#s6">Sharing Your Information</a></li>
+        <li><a href="#s7">Your Privacy Rights</a></li>
+        <li><a href="#s8">Children's Privacy</a></li>
+        <li><a href="#s9">Cookies and Tracking</a></li>
+        <li><a href="#s10">Third Party Links</a></li>
+        <li><a href="#s11">International Data Transfers</a></li>
+        <li><a href="#s12">Business and Education Plans</a></li>
+        <li><a href="#s13">Advertising</a></li>
+        <li><a href="#s14">Changes to This Policy</a></li>
+        <li><a href="#s15">Contact Us</a></li>
+        <li><a href="#s16">Grievance Officer</a></li>
+      </ol>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="section" id="s1">
+      <div class="section-number">Section 01</div>
+      <h2>Introduction</h2>
+      <p>Welcome to <strong>vorq</strong>. We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, store, and protect your information when you use our application.</p>
+      <p>Please read this policy carefully. If you disagree with any part of this policy please discontinue use of our application immediately.</p>
+      <div class="info-card purple">
+        <p><strong>Who we are:</strong> Vorq is a communication platform offering messaging, communities, broadcast channels, and social features. Our goal is to provide a private, secure, and genuinely useful communication experience for everyone.</p>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section" id="s2">
+      <div class="section-number">Section 02</div>
+      <h2>Information We Collect</h2>
+
+      <h3>Information You Provide Directly</h3>
+      <p><strong>Account Information</strong></p>
+      <ul>
+        <li>Username and display name</li>
+        <li>Email address if provided during registration</li>
+        <li>Phone number if provided during registration</li>
+        <li>Profile photo and cover image</li>
+        <li>Date of birth if provided</li>
+        <li>Professional credentials if submitted for verification</li>
+        <li>Payment information processed securely through Google Play Billing</li>
+      </ul>
+
+      <p><strong>Content You Create</strong></p>
+      <ul>
+        <li>Text messages and conversations</li>
+        <li>Voice messages and audio recordings</li>
+        <li>Photos, videos, and short clips you upload</li>
+        <li>Long form video posts you create</li>
+        <li>Documents and files you share</li>
+        <li>Posts, comments, and reactions you make</li>
+        <li>Communities and groups you create</li>
+        <li>Events you organize</li>
+        <li>Stories and broadcast channel content you publish</li>
+      </ul>
+
+      <h3>Information Collected Automatically</h3>
+      <ul>
+        <li>Device type and model</li>
+        <li>Operating system version</li>
+        <li>Unique device identifiers</li>
+        <li>Mobile network information</li>
+        <li>App version and crash reports</li>
+        <li>Features you use and how often</li>
+        <li>Time and duration of your sessions</li>
+        <li>General location based on IP address for currency detection only</li>
+      </ul>
+
+      <div class="info-card yellow">
+        <p><strong>Location note:</strong> We only collect precise location if you explicitly enable location sharing features such as live location or nearby discovery. You can disable this at any time through your device settings.</p>
+      </div>
+
+      <h3>Information From Third Parties</h3>
+      <ul>
+        <li><strong>Google Play</strong> — Purchase and subscription confirmation when you buy premium plans or extra storage through Google Play Billing. We never receive your full payment details.</li>
+        <li><strong>AdMob</strong> — Advertising identifiers for showing relevant ads to all users.</li>
+      </ul>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section" id="s3">
+      <div class="section-number">Section 03</div>
+      <h2>How We Use Your Information</h2>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Purpose</th>
+            <th>What We Use</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Providing our services</strong></td>
+            <td>Account data, messages, media to deliver the app experience</td>
+          </tr>
+          <tr>
+            <td><strong>Processing payments</strong></td>
+            <td>Purchase confirmation from Google Play to activate subscriptions</td>
+          </tr>
+          <tr>
+            <td><strong>Improving the app</strong></td>
+            <td>Anonymous usage patterns, crash reports, performance data</td>
+          </tr>
+          <tr>
+            <td><strong>Safety and security</strong></td>
+            <td>Behavioral signals to detect fraud, spam, and abuse</td>
+          </tr>
+          <tr>
+            <td><strong>Customer support</strong></td>
+            <td>Account information and conversation history with our support team</td>
+          </tr>
+          <tr>
+            <td><strong>Advertising</strong></td>
+            <td>Device advertising ID for AdMob ads shown to all users</td>
+          </tr>
+          <tr>
+            <td><strong>Legal compliance</strong></td>
+            <td>Account data when required by applicable law</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="info-card green">
+        <p><strong>We do not sell your personal data.</strong> We never sell, rent, or trade your personal information to any third party for their own marketing or commercial purposes under any circumstances.</p>
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section" id="s4">
+      <div class="section-number">Section 04</div>
+      <h2>End-to-End Encryption</h2>
+      <p>All private messages and group chat messages in Vorq are protected by end-to-end encryption using AES-256-GCM encryption. This means:</p>
+      <ul>
+        <li>Messages are encrypted on your device before leaving it</li>
+        <li>Only the intended recipient can decrypt and read your messages</li>
+        <li>Our servers never have access to the content of your encrypted messages</li>
+        <li>Even Vorq employees cannot read your private conversations</li>
+        <li>Voice messages, photos, videos, and files sent in private chats are also encrypted before upload</li>
+        <li>Encryption keys are generated and stored on your device only and never uploaded to our servers</li>
+      </ul>
+      <div class="info-card green">
+        <p><strong>How media delivery works:</strong> Media files sent in private and group chats are temporarily stored in encrypted form on Cloudflare R2 for delivery purposes and automatically deleted within 48 hours after all recipients have downloaded them to their devices. Cloudflare only ever receives encrypted unreadable bytes.</p>
+      </div>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section" id="s5">
+      <div class="section-number">Section 05</div>
+      <h2>Data Storage and Security</h2>
+
+      <h3>Where We Store Your Data</h3>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>Storage Provider</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>User accounts and message metadata</td>
+            <td>Supabase secure servers</td>
+          </tr>
+          <tr>
+            <td>Media files, documents, and attachments</td>
+            <td>Cloudflare R2</td>
+          </tr>
+          <tr>
+            <td>Long form videos</td>
+            <td>Bunny.net content delivery network</td>
+          </tr>
+          <tr>
+            <td>Profile photos</td>
+            <td>Cloudflare Images</td>
+          </tr>
+          <tr>
+            <td>Cold storage archives</td>
+            <td>Backblaze B2</td>
+          </tr>
+          <tr>
+            <td>Real time message delivery</td>
+            <td>Ably messaging infrastructure</td>
+          </tr>
+        </tbody>
+      </table>
+
+    <!-- Section 6 -->
+    <div class="section" id="s6">
+      <div class="section-number">Section 06</div>
+      <h2>Sharing Your Information</h2>
+      <p>We do not sell your personal information to any third party under any circumstances. We share information only in the following limited circumstances:</p>
+
+      <h3>With Other Users</h3>
+      <p>Information you choose to make public on your profile, content you post in public communities, your username in group chats you join, and your online status according to your privacy settings.</p>
+
+      <h3>With Service Providers</h3>
+      <p>We share limited necessary data with the following providers who are bound by strict data processing agreements:</p>
+      <ul>
+        <li>Supabase — database and authentication</li>
+        <li>Cloudflare — content delivery and storage</li>
+        <li>Bunny.net — video hosting and delivery</li>
+        <li>Backblaze — cold storage archiving</li>
+        <li>Google AdMob — advertising to all users</li>
+        <li>Google Play — payment processing</li>
+        <li>Ably — real time message delivery</li>
+      </ul>
+
+      <h3>With Law Enforcement</h3>
+      <p>We may disclose information when required by law. We will notify you of such requests where legally permitted. Due to our end-to-end encryption we cannot provide the content of private messages even if requested because we genuinely do not have access to it.</p>
+
+      <div class="info-card yellow">
+        <p><strong>Business transfers:</strong> In the event of a merger, acquisition, or sale of assets your information may be transferred. We will notify you before any such transfer and give you the option to delete your account.</p>
+      </div>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="section" id="s7">
+      <div class="section-number">Section 07</div>
+      <h2>Your Privacy Rights and Controls</h2>
+      <p>You have the following rights regarding your personal information:</p>
+
+      <div class="rights-grid">
+        <div class="right-card">
+          <strong>Access</strong>
+          <span>View all personal information we hold about you through the Data Transparency Dashboard in settings</span>
+        </div>
+        <div class="right-card">
+          <strong>Download</strong>
+          <span>Download a complete copy of all your data at any time in standard formats</span>
+        </div>
+        <div class="right-card">
+          <strong>Correction</strong>
+          <span>Update or correct your personal information at any time through your profile settings</span>
+        </div>
+        <div class="right-card">
+          <strong>Deletion</strong>
+          <span>Delete your account and all associated data at any time. Processed within 30 days.</span>
+        </div>
+        <div class="right-card">
+          <strong>Portability</strong>
+          <span>Export your message history, uploaded media files, and follower lists at any time</span>
+        </div>
+        <div class="right-card">
+          <strong>Opt-out of ads</strong>
+          <span>Opt out of personalized advertising through your Android device settings under Google then Ads</span>
+        </div>
+      </div>
+
+      <h3>In-App Privacy Controls</h3>
+      <ul>
+        <li>Control who can see your last seen status</li>
+        <li>Control who can see your profile photo</li>
+        <li>Control who can send you messages</li>
+        <li>Control who can add you to groups</li>
+        <li>Control read receipt visibility per contact</li>
+        <li>Control typing indicator visibility</li>
+        <li>Enable or disable location sharing at any time</li>
+      </ul>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="section" id="s8">
+      <div class="section-number">Section 08</div>
+      <h2>Children's Privacy</h2>
+      <p>vorq is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information please contact us immediately at <a href="mailto:vorq2026@gmail.com">vorq2026@gmail.com</a>. We will delete such information promptly.</p>
+      <p>For users between 13 and 18 years of age we recommend parental guidance when using the app. Education Plan institutions are responsible for obtaining appropriate parental consent for students under 18 using the platform.</p>
+      <div class="info-card purple">
+        <p><strong>Student data protection:</strong> Student data collected through Education Plan workspaces is never used for advertising purposes under any circumstances and is never shared with third parties beyond what is strictly required to provide the service.</p>
+      </div>
+    </div>
+
+    <!-- Section 9 -->
+    <div class="section" id="s9">
+      <div class="section-number">Section 09</div>
+      <h2>Cookies and Tracking Technologies</h2>
+      <p>Our mobile application does not use traditional browser cookies. We use the following technologies:</p>
+
+      <h3>Local Storage</h3>
+      <ul>
+        <li>App preferences and settings stored locally on your device</li>
+        <li>Cached messages stored locally for offline access and faster loading</li>
+        <li>Authentication tokens stored securely on your device</li>
+      </ul>
+
+      <h3>Analytics</h3>
+      <ul>
+        <li>Anonymous usage analytics to understand app performance</li>
+        <li>Crash reporting to identify and fix technical issues</li>
+        <li>No personally identifiable information is included in analytics data</li>
+      </ul>
+
+      <h3>Advertising Identifiers</h3>
+      <p>Google Advertising ID used by AdMob to show relevant ads to all users. You can reset or opt out of personalized ads through your Android device settings under Google then Ads.</p>
+    </div>
+
+    <!-- Section 10 -->
+    <div class="section" id="s10">
+      <div class="section-number">Section 10</div>
+      <h2>Third Party Links and Services</h2>
+      <p>Our app may contain links to third party websites or services. We are not responsible for the privacy practices of these third parties. We encourage you to read the privacy policies of any third party services you access through Vorq.</p>
+    </div>
+
+    <!-- Section 11 -->
+    <div class="section" id="s11">
+      <div class="section-number">Section 11</div>
+      <h2>International Data Transfers</h2>
+      <p>Your information may be transferred to and processed in countries other than your own. These countries may have different data protection laws than your country. We ensure appropriate safeguards are in place for all international transfers including data processing agreements with all service providers that comply with applicable privacy laws.</p>
+    </div>
+
+    <!-- Section 12 -->
+    <div class="section" id="s12">
+      <div class="section-number">Section 12</div>
+      <h2>Business and Education Plan Data</h2>
+
+      <h3>Business Plan</h3>
+      <ul>
+        <li>Workspace owners are responsible for the data of employees they invite</li>
+        <li>We process employee data on behalf of the workspace owner as a data processor</li>
+        <li>Workspace owners can export all workspace data at any time</li>
+        <li>Upon subscription cancellation workspace data is preserved for 90 days then permanently deleted</li>
+      </ul>
+
+      <h3>Education Plan</h3>
+      <ul>
+        <li>Institution admins are responsible for student, teacher, and parent data</li>
+        <li>Institutions must obtain appropriate consent before adding minors to the platform</li>
+        <li>Student data is never used for advertising purposes under any circumstances</li>
+        <li>Student data is never shared with third parties beyond what is required to provide the service</li>
+        <li>Institutions can export all data at any time for compliance purposes</li>
+        <li>Student data is subject to heightened protection standards</li>
+      </ul>
+    </div>
+
+    <!-- Section 13 -->
+    <div class="section" id="s13">
+      <div class="section-number">Section 13</div>
+      <h2>Advertising</h2>
+
+      <ul>
+        <li>All users see advertisements served by Google AdMob</li>
+        <li>Ads are targeted based on general interests and device information</li>
+        <li>We do not share your private messages or personal conversations with advertisers</li>
+        <li>You can opt out of personalized ads through your Android device settings under Google then Ads</li>
+      </ul>
+    </div>
+
+    <!-- Section 14 -->
+    <div class="section" id="s14">
+      <div class="section-number">Section 14</div>
+      <h2>Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by:</p>
+      <ul>
+        <li>Sending a notification inside the app</li>
+        <li>Updating the Last Updated date at the top of this policy</li>
+        <li>For major changes requiring your consent showing a prompt inside the app before you can continue using it</li>
+      </ul>
+      <p>Your continued use of the app after changes are posted constitutes your acceptance of the updated policy.</p>
+    </div>
+
+    <!-- Section 15 — Contact -->
+    <div class="section" id="s15">
+      <div class="section-number">Section 15</div>
+      <h2>Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices please contact us. We aim to respond to all privacy inquiries within 48 hours for premium users and 5 business days for free users.</p>
+    </div>
+
+    <!-- Contact Box -->
+    <div class="contact-box">
+      <h2>Get in Touch</h2>
+      <p>We are here to help with any privacy questions or data requests.</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <label>App Name</label>
+          <span>vorq</span>
+        </div>
+        <div class="contact-item">
+          <label>Support Email</label>
+          <a href="mailto:vorq2026@gmail.com">vorq2026@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <label>In-App Support</label>
+          <span>Settings → Help → Contact Support</span>
+        </div>
+        <div class="contact-item">
+          <label>Response Time</label>
+          <span>48 hrs Premium · 5 days Free</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 16 -->
+    <div class="section" id="s16" style="margin-top: 52px;">
+      <div class="section-number">Section 16</div>
+      <h2>Grievance Officer</h2>
+      <p>In accordance with applicable laws including the Information Technology Act 2000 and the Information Technology Rules 2011 the name and contact details of the Grievance Officer are:</p>
+      <table class="data-table">
+        <tbody>
+          <tr>
+            <td><strong>Name</strong></td>
+            <td>Deborshi Bora</td>
+          </tr>
+          <tr>
+            <td><strong>Email</strong></td>
+            <td><a href="mailto:vorq2026@gmail.com" style="color: var(--purple);">vorq2026@gmail.com</a></td>
+          </tr>
+          <tr>
+            <td><strong>Address</strong></td>
+            <td>North Haiborgaon, Nagaon, Assam — 782002, India</td>
+          </tr>
+          <tr>
+            <td><strong>Response Time</strong></td>
+            <td>Within 30 days of receiving a complaint</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p><strong>vorq Privacy Policy</strong> · Last updated September 2026 · Effective immediately upon posting</p>
+    <p style="margin-top: 6px;">© 2026 vorq. All rights reserved. · <a href="mailto:vorq2026@gmail.com" style="color: var(--purple); text-decoration: none;">vorq2026@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
